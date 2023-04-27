@@ -5,7 +5,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "run-server": "json-server -p 4000 --watch ./data/db.json"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.1.3",
