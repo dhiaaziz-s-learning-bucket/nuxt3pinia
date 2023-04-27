@@ -9,6 +9,9 @@
         <span class="material-icons-outlined text-secondary text-5xl">
           shopping_bag
         </span>
+        <span class="bg-white py-1 px-2 rounded-2xl font-bold badge">
+          {{ cartStore.numberOfProducts }}
+        </span>
       </NuxtLink>
     </header>
 
@@ -20,12 +23,14 @@
 </template>
 
 <script setup>
-  import { useCartStore } from '@/stores/cartStore';
-
-  const cartStore = useCartStore();
+  import { useCartStore } from '@/stores/cartStore'
+  const cartStore = useCartStore()
   cartStore.getCart()
 </script>
 
 <style scoped>
-
+  .badge {
+    position: relative;
+    left: -15px;
+  }
 </style>
